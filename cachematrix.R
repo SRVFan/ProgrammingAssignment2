@@ -3,8 +3,20 @@
 
 ## Write a short comment describing this function
 
-makeCacheMatrix <- function(x = matrix()) {
-
+makeCacheMatrix <- function(mat = matrix()) {
+    ## Add Code
+    invert <- NULL
+    set <- function(p.mat) {
+        mat <<- p.mat
+        invert <<- NULL
+    }
+    get <- function() mat  # Simply return the matrix
+    setInvert <- function(p.inv) invert <<- p.inv
+    getInvert <- function() invert
+    list(set = set, get = get,
+         setInvert = setInvert,
+         getInvert = getInvert)
+    ## End of code
 }
 
 
